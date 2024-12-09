@@ -43,4 +43,6 @@ test/*.js
 
 .idea
 
+.idea
+
 .DS_Store
