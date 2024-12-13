@@ -20,7 +20,14 @@ async function getPriceQuote(symbol, limit = 1) {
   }
 }
 
-getPriceQuote("BTCUSDT").then((res) => console.log(res?.result.list));
+// async function checkBybit() {
+//   console.time("latency");
+//   // getPriceQuote("BTCUSDT").then((res) => console.log(res?.result.list));
+//   console.log(await getPriceQuote("BTCUSDT"));
+//   console.timeEnd("latency");
+// }
+
+// checkBybit();
 
 async function initiateTrade(symbol, side, orderType, qty) {
   try {
@@ -38,8 +45,8 @@ async function initiateTrade(symbol, side, orderType, qty) {
   }
 }
 
-initiateTrade("BTCUSDT", "Buy", "Market", "0.1").then((res) =>
-  console.log(res)
-);
+// initiateTrade("BTCUSDT", "Buy", "Market", "0.1").then((res) =>
+//   console.log(res)
+// );
 
 export { getPriceQuote, initiateTrade };
